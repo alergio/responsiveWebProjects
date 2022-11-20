@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --background: #eee;
+    --background-header-product: rgb(204, 200, 200);
+    --accent-color: #f1c40f;
+    --second-color: darkorange;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo {
+    width: 60vw;
+}
+
+.logo > img {
+    width: 300px;
+    margin-left: 15px;
+}
+
+#header {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: var(--background);
+}
+
+nav {
+    width: max(50%, 300px);
+    font-size: 1.65rem;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-inline-start: 0;
+}
+
+nav li a {
+    position: relative;
+}
+
+nav li a::after {
+    content: '';
+    height: 1px;
+    width: 5px;
+    background: black;
+    position: absolute;
+    bottom: -2px;
+    left: calc(50% - 2.5px);
+    transition: 0.8s;
+}
+
+nav li a:hover::after {
+    left: 0;
+    width: 100%;
+}
+
+li {
+    display: block;
+}
+
+main {
+    padding-top: 50px;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#hero h1 {
+    font-size: 2.2rem;
+    margin: 15px auto;
+}
+
+#email {
+    font-size: 1.5rem;
+    height: 2.4rem;
+    width: 30rem;
+    border-radius: 3px;
+    border: 1px solid;
+    padding-left: 5px;
+}
+
+#form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#submit {
+    margin: 15px;
+    width: 13rem;
+    height: 2.8rem;
+    font-weight: 800;
+    font-size: 1.33em;
+}
+
+.btn {
+    background-color: var(--accent-color);
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 3px;
+    transition: background-color .65s;
+}
+
+.btn:hover {
+    background: var(--second-color);
+}
+
+
+#container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.grid {
+    display: flex;
+    height: 125px;
+}
+
+.icon {
+    display: flex;
+    width: 20vw;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--second-color);
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+}
+
+.desc h2 {
+    font-size: 2.1rem;
+}
+
+.desc p {
+    font-size: 1.6rem;
+}
+
+#how-it-works {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#pricing {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    width: calc(100% / 3);
+    margin: 10px;
+    font-size: 1.8rem;
+}
+
+#level {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--background-header-product);
+}
+
+.product > h2 {
+    margin-top: 15px;
+}
+
+.product > ul {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.product .btn {
+    width: calc(100% / 3);
+    margin: 15px 0;
+    height: 2.6rem;
+    border: none;
+}
+
+.product .btn:focus {
+    border: 1.2px solid black;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: var(--background-header-product);
+}
+
+footer > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+footer > ul > li {
+    padding-right: 12px;
+    font-size: 1.5rem;
+}
+
+li a {
+    text-decoration: none;
+    color: initial;
+}
+
+li a:visited {
+    color: none;
+}
+
+footer > span {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.35rem;
+    margin-top: 5px;
+}
+
+
+@media (max-width: 650px) {
+    html {
+        font-size: 55%;
+    }
+
+    nav > ul {
+        flex-direction: column;
+    } 
+
+    #pricing {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 50%;
+    }
+
+    .product .btn {
+        height: 4rem;
+    }
+}
